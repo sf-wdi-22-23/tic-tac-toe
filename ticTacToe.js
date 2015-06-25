@@ -1,6 +1,6 @@
 // wait for the DOM to finish loading
 window.addEventListener(function () {
-  // all your code should go in here.
+  // all your code should here
 
 
 });

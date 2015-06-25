@@ -1,30 +1,28 @@
-#Week 1 Project - Tic Tac Toe
+# Tic Tac Toe - Weekend Lab
 
-**Objective:** Build a tic taco game in HTML and pure javascript.
+**Objective:** Build a tic-tac-toe game in HTML and pure JavaScript.
 
-This week we have been learning about writing functions, working with loops, and writing conditionals. We also learned about how parts of HTML work and function.
+This week, we've been learning about working with conditionals and loops, as well as writing functions. We've also learned about the structure of the DOM and how we can interact with it using CSS and JavaScript.
 
-Today we will be making a Tic Tac Toe game using all of this.
+For your first weekend lab, we'll be making a tic-tac-toe game using your knowledge and skills from this week.
 
 ## Minimum Requirements
 * A user should be able to click on different squares to make a move.
-* Every click will alternate between marking an `X` and `O`
-* Upon marking of an individual cell, use javascript to add a class to each cell to display separate colors.
-* A cell should not be able able to replayed once marked.
-* Add a reset button that will clear the contents of the board.
+* Every click should alternate between marking an `X` and `O`.
+* When marking an individual cell, use JavaScript to add a class to the cell to display separate colors for `X`'s and `O`'s.
+* A cell should not be able to replayed once marked.
+* Add a reset button that clears the contents of the board.
 
-##How to get started
-1. Construct a `index.html` to be your starting point on this project. Add your necessary html tags, including `script` and `link` tags to link to your javascript and css respecively.
-2. Before you even start working with javascript, construct the gameboard. The gameboard page should include the 3x3 grid, and at minimum a reset button. Using `id` and `class` on clickable elements will help you wire this up in javascript afterwards.
-3. Javascript portion will be next
-	* Locate the element first to use it within your app. Think about using `querySelector` or `querySelectorAll` to locate your target elements. Try this in your console to make sure your selection works.
-	* After finding the elements, start writing logic to use the `addEventListener` to setup a`click` event for those elements.
-	* You will also need a variable to keep track of moves. As this will be used to indicate whether or not to draw an `X` or an `O`
+## How to Get Started
+1. Use `index.html` as your starting point on this project. There is already some starter code in `index.html`, `style.css`, and `ticTacToe.js`. Make sure you link your CSS and JavaScript files to your `index.html`.
+2. Test that your CSS and JavaScript files are linked to your `index.html` by adding an alert to `ticTacToe.js` and opening `index.html` in the browser. You should see some CSS styling already applied from the starter code, and you should also see your alert message pop up.
 
-##Bonus
+3. The next step is to create the tic-tac-toe game-play with JavaScript:
+	* First locate DOM elements before trying to use them in your app. Think about using `querySelector` or `querySelectorAll` to locate your target elements. Try this in your console to make sure your selection works.
+	* After finding the elements, start writing logic using `addEventListener` to set up `click` events for those elements.
+	* You will also need a variable to keep track of moves. This will be used to indicate whether or not to draw an `X` or an `O`.
+
+## Bonus
 * Display a message to indicate which turn is about to be played.
-* After the necessary moves have been played, stop game and alert the winner if one player ends up winning with three in a row.
-	* Hint: Determine a set of winning combinations. Check those combinations on the board contents after every move.
-
-
-
+* If a player wins with three in a row, stop the game and alert the winner.
+	* **Hint:** Determine a set of winning combinations. Check those combinations against the board contents after every move.
