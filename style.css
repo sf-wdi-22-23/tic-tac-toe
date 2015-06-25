@@ -1,15 +1,15 @@
 #board {
-  width: 31em;
   height: 30em;
+  left: 25%;
   position: relative;
   top: 30px;
-  left: 25%;
+  width: 31em;
 }
 
 .box {
-  width: 10em;
-  height: 10em;
   border: 1px solid black;
   display: inline-block;
+  height: 10em;
   margin-bottom: 4px;
+  width: 10em;
 }
