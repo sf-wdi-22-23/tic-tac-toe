@@ -14,11 +14,13 @@ For your first weekend lab, we'll be making a tic-tac-toe game using your knowle
 * Add a reset button that clears the contents of the board.
 
 ## How to Get Started
-1. Use `index.html` as your starting point on this project. There is already some starter code in `index.html`, `style.css`, and `ticTacToe.js`. Make sure you link your CSS and JavaScript files to your `index.html`.
+1. Fork this repository, and clone it onto your local computer.
 
-2. Test that your CSS and JavaScript files are linked to your `index.html` by adding an alert to `ticTacToe.js` and opening `index.html` in the browser. You should see an empty tic-tac-toe game board, and you should also see your alert message pop up.
+2. Use `index.html` as your starting point on this project. There is already some starter code in `index.html`, `style.css`, and `ticTacToe.js`. Make sure you link your CSS and JavaScript files to your `index.html`.
 
-3. The next step is to create the tic-tac-toe game-play with JavaScript:
+3. Test that your CSS and JavaScript files are linked to your `index.html` by adding an alert to `ticTacToe.js` and opening `index.html` in the browser. You should see an empty tic-tac-toe game board, and you should also see your alert message pop up.
+
+4. The next step is to create the tic-tac-toe game-play with JavaScript:
 	* First locate DOM elements before trying to use them in your app. Think about using `querySelector` or `querySelectorAll` to locate your target elements. Try this in your console to make sure your selection works.
 	* After finding the elements, start writing logic using `addEventListener` to set up `click` events for those elements.
 	* You will also need a variable to keep track of moves. This will be used to indicate whether or not to draw an `X` or an `O`.
