@@ -25,6 +25,8 @@ For your first weekend lab, we'll be making a tic-tac-toe game using your knowle
 	* After finding the elements, start writing logic using `addEventListener` to set up `click` events for those elements.
 	* You will also need a variable to keep track of moves. This will be used to indicate whether or not to draw an `X` or an `O`.
 
+5. Submit the link to your GitHub repo in the [homework submission form](https://docs.google.com/a/generalassemb.ly/forms/d/14rNXnDaq5X5Rvda-1BRZCl9YmkOoZzf7oxGBEZG_YJE/viewform).
+
 ## Bonus
 * Display a message to indicate which turn is about to be played.
 * If a player wins with three in a row, stop the game and alert the winner.
