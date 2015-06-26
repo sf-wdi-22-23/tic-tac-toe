@@ -1,23 +1,54 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+
+    <!-- set viewport to device width to allow responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- custom styles (always require after Bootstrap) -->
+    <link rel="stylesheet" href="style.css">
+
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
-    <div id="board">
-      <!-- The `&nbsp;` in each div is a non-breakable space.
-           It prevents the div from collapsing. -->
-      <div class="box">&nbsp;</div>
-      <div class="box">&nbsp;</div>
-      <div class="box">&nbsp;</div>
-      <div class="box">&nbsp;</div>
-      <div class="box">&nbsp;</div>
-      <div class="box">&nbsp;</div>
-      <div class="box">&nbsp;</div>
-      <div class="box">&nbsp;</div>
-      <div class="box">&nbsp;</div>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>Tic Tac Toe</h1>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+
+        <!-- a column represents our game board -->
+        <!-- the `offset` class helps us center the board -->
+        <div class="col-md-6 col-md-offset-3" id="board">
+          
+          <!-- you can put rows inside of columns! -->
+          <!-- our board has 3 rows, each with 3 columns inside -->
+          <div class="row">
+            <div class="col-xs-4 box"></div>
+            <div class="col-xs-4 box"></div>
+            <div class="col-xs-4 box"></div>
+          </div>
+          
+          <div class="row">
+            <div class="col-xs-4 box"></div>
+            <div class="col-xs-4 box"></div>
+            <div class="col-xs-4 box"></div>
+          </div>
+          
+          <div class="row">
+            <div class="col-xs-4 box"></div>
+            <div class="col-xs-4 box"></div>
+            <div class="col-xs-4 box"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
