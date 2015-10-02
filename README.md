@@ -10,7 +10,7 @@ For your first weekend lab, we'll be making a tic-tac-toe game using your knowle
 ## Base Goals
 * Users should be able to click on any empty square to make a move.   
 * Every move should alternate between marking an `X` and `O` (the two players).  
-* A cell should not be able to changed once marked.  
+* A cell should not be able to be changed once it has been marked.  
 * Users should be able to click a "reset" button to clear all the `X`s and `O`s from the board.  
 
 
@@ -48,7 +48,7 @@ For your first weekend lab, we'll be making a tic-tac-toe game using your knowle
 1. Most of your game logic will happen when a user clicks one of the squares on the board.  Here are some hints:
 
   * You'll need to check whether a square is empty. 
-  * You will also need a to keep track of whose turn it is. This will be used to indicate whether to draw an `X` or an `O`.  Try storing the turn as a variable. 
+  * You also need to keep track of whose turn it is. This will be important when deciding whether to draw an `X` or an `O`.  Try storing the turn as a variable. 
   * Write a separate function to check who has won (if anyone). What are the ways to win tic-tac-toe?  When will you need to call this function?
   * You will need to know if the board is completely full, because that means there has been a tie. How many moves could possibly be made in one game?
 
@@ -58,11 +58,11 @@ For your first weekend lab, we'll be making a tic-tac-toe game using your knowle
 
 1. Create a `tic-tac-toe` directory inside your homework directory.  
 
-1. Copy over your `index.html`, `styles.css`, and `ticTacToe.js` from your `dev/tic-tac-toe` directory to your `22-homework/tic-tac-toe` or `23-homework/tic-tac-toe` directory.
+1. Copy over your `index.html`, `styles.css`, and `ticTacToe.js` from your `dev/tic-tac-toe` directory to your `22-homework/username/tic-tac-toe` or `23-homework/username/tic-tac-toe` directory.
 
-1. Change directories into the new `tic-tac-toe` directory inside your homework directory. List all the files with `ls -a`. 
+1. Change directories into the new `tic-tac-toe` directory inside your homework directory.  ( `2x-homework/username/tic-tac-toe` )  List all the files with `ls -a`.   
 
-1. If you are *sure* that you are inside your new homework `tic-tac-toe` directory and you see a `.git` directory listed there, run `rm -rf .git` to remove the `.git` file. (We don't want a whole tic-tac-toe repository nested inside your homework repository -- that would get too complicated!)
+1. If you are *sure* that you are inside your new homework `tic-tac-toe` directory and you see a `.git` directory listed there (you shouldn't!), run `rm -rf .git` to remove the `.git` file. (We don't want a whole tic-tac-toe repository nested inside your homework repository -- that would get too complicated!)
 
 1. Follow the directions from your homework repo readme to push your changes and submit a new pull request.
 
