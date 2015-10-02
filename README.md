@@ -16,13 +16,13 @@ For your first weekend lab, we'll be making a tic-tac-toe game using your knowle
 
 ## Stretch Goals
 
-* Display a message to indicate which turn is about to be played.
-
-* If a player wins (by drawing three of their mark in a row, column, or diagonal), stop the game and alert the winner.
+* Display a message to indicate whose turn it is (which player's mark is about to be played).    
+* If a player wins (by drawing three of their mark in a row, column, or diagonal), alert the winner and reset the game!   
+* Creatively style your tic-tac-toe site.  
 
 ## Suggested Workflow
 
-**Set up repository, files, and basic structure. **
+**Set up repository, files, and basic structure.**
 
 1. Fork this repository to create a copy on your GitHub account.
 1. Clone the tic-tac-toe repository from *your GitHub account* into your `dev` folder to create a local copy on your computer.
@@ -35,11 +35,11 @@ For your first weekend lab, we'll be making a tic-tac-toe game using your knowle
 
 1. Use Bootstrap's grid system to create the rest of the empty tic-tac-toe game board. The empty board should look like this:
 
-![empty tic tac toe board](board.png)
+    <img src="board.png" width="300px" alt="empty tic tac toe board">
 
 1. Add a reset button below the board.
 
-**Gameplay**
+**Gameplay: **
 
 4. Use the `$()` jQuery function with CSS selectors to locate each of the DOM elements your user will click. Try this in your console to make sure your selection works.  
 
