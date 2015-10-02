@@ -6,12 +6,16 @@
     <!-- set viewport to device width to allow responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CDN -->
+    <!-- Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- link to stylesheet (always require after Bootstrap) -->
+    <!-- link to custom stylesheet (always require after Bootstrap) -->
+    <link rel="styles.css" href="styles.css">
 
-    <!-- link to javascript file -->
+    <!-- jQuery from CDN -->
+
+
+    <!-- link to custom javascript file (always require after external JS libraries) -->
 
     <title>Tic Tac Toe</title>
   </head>
@@ -30,24 +34,15 @@
         <div class="col-md-6 col-md-offset-3" id="board">
 
           <!-- you can put rows inside of columns! -->
-          <!-- our board has 3 rows, each with 3 columns inside -->
+          <!-- Bootstrap subdivides these 'nested' rows into 12 columns, too! -->
           <div class="row">
-            <div class="col-xs-4 box"></div>
-            <div class="col-xs-4 box"></div>
-            <div class="col-xs-4 box"></div>
+            <div class="col-md-4 box">a</div>
+            <div class="col-md-4 box">a</div>
+            <div class="col-md-4 box">a</div>
           </div>
+        
 
-          <div class="row">
-            <div class="col-xs-4 box"></div>
-            <div class="col-xs-4 box"></div>
-            <div class="col-xs-4 box"></div>
-          </div>
 
-          <div class="row">
-            <div class="col-xs-4 box"></div>
-            <div class="col-xs-4 box"></div>
-            <div class="col-xs-4 box"></div>
-          </div>
         </div>
       </div>
     </div>
