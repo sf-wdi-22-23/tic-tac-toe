@@ -39,7 +39,7 @@ For your first weekend lab, we'll be making a tic-tac-toe game using your knowle
 
 1. Add a reset button below the board.
 
-**Gameplay: **
+**Gameplay:**
 
 4. Use the `$()` jQuery function with CSS selectors to locate each of the DOM elements your user will click. Try this in your console to make sure your selection works.  
 
