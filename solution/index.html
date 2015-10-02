@@ -6,11 +6,17 @@
     <!-- set viewport to device width to allow responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CDN -->
+    <!-- Bootstrap CSS from CDN -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- link to stylesheet (always require after Bootstrap) -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- link to custom stylesheet (always require after Bootstrap) -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- jQuery from CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- link to custom javascript file (always require after external JS libraries) -->
+    <script type="text/javascript" src="ticTacToe.js"></script>
 
     <title>Tic Tac Toe</title>
   </head>
@@ -29,7 +35,7 @@
         <div class="col-md-6 col-md-offset-3" id="board">
 
           <!-- you can put rows inside of columns! -->
-          <!-- our board has 3 rows, each with 3 columns inside -->
+          <!-- Bootstrap subdivides these 'nested' rows into 12 columns, too! -->
           <div class="row">
             <div class="col-xs-4 box"></div>
             <div class="col-xs-4 box"></div>
@@ -57,10 +63,5 @@
       </div>
     </div>
 
-    <!-- jquery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-    <!-- link to javascript file -->
-    <script type="text/javascript" src="ticTacToe.js"></script>
   </body>
 </html>
