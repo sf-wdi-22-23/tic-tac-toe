@@ -29,7 +29,7 @@ $(document).ready(function(){
   var resetGame = function() {
     // reset the board itself
     $boxes.text("");
-    $boxes.removeClass("X")
+    $boxes.removeClass("X");
     $boxes.removeClass("O");
 
     // reset the variables that track game progress
