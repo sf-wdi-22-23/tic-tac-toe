@@ -45,7 +45,7 @@ $(document).ready(function(){
   // helper function to check for wins
   // returns true if the player passed into the function ("X" or "O")
   var allThree = function(player, box1, box2, box3) {
-    // note that $boxes.get(i) returns a plain dom element
+    // note that $boxes.get(i), like $boxes[i], returns a plain DOM element
     // so all of these boxes are passed in as non-jQuery DOM elements
     // we convert them to jQuery using $()
     return ($(box1).text() === player) && ($(box2).text() === player) && ($(box3).text() === player);
