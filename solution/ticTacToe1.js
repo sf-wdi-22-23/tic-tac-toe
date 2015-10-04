@@ -43,7 +43,8 @@ $(document).ready(function(){
   };
 
   // helper function to check for wins
-  // returns true if the player passed into the function ("X" or "O")
+  // returns true if the player passed into the function ("X" or "O") owns all three
+  // of the boxes passed in
   var allThree = function(player, box1, box2, box3) {
     // note that $boxes.get(i), like $boxes[i], returns a plain DOM element
     // so all of these boxes are passed in as non-jQuery DOM elements
