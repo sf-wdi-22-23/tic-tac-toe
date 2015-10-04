@@ -5,16 +5,18 @@
 
     <!-- set viewport to device width to allow responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href='https://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
     <!-- Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- link to custom stylesheet (always require after Bootstrap) -->
+    <link rel="stylesheet" href="styles.css">
 
     <!-- jQuery from CDN -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- link to custom javascript file (always require after external JS libraries) -->
+    <script type='text/javascript' src='ticTacToe.js'></script>
 
     <title>Tic Tac Toe</title>
   </head>
@@ -23,26 +25,40 @@
       <div class="row text-center">
         <div class="col-md-12">
           <h1>Tic Tac Toe</h1>
-          <hr>
         </div>
       </div>
       <div class="row">
 
         <!-- a column represents our game board -->
         <!-- the `offset` class helps us center the board -->
-        <div class="col-md-6 col-md-offset-3" id="board">
+        <div class="col-sm-6 col-sm-offset-3" id="board">
 
           <!-- you can put rows inside of columns! -->
           <!-- Bootstrap subdivides these 'nested' rows into 12 columns, too! -->
+          
           <div class="row">
-            <div class="col-md-4 box">a</div>
-            <div class="col-md-4 box">a</div>
-            <div class="col-md-4 box">a</div>
+            <div class="col-sm-4 box" id="one"></div>
+            <div class="col-sm-4 box" id="two"></div>
+            <div class="col-sm-4 box" id="three"></div>
           </div>
-        
-
+          <div class="row">
+            <div class="col-sm-4 box" id="four"></div>
+            <div class="col-sm-4 box" id="five"></div>
+            <div class="col-sm-4 box" id="six"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 box" id="seven"></div>
+            <div class="col-sm-4 box" id="eight"></div>
+            <div class="col-sm-4 box" id="nine"></div>
+          </div>
+          
 
         </div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="col-sm-2 col-sm-offset-5" id="reset">Reset Board</button>
+      </div>
       </div>
     </div>
   </body>

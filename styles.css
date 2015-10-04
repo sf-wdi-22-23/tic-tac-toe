@@ -1,8 +1,30 @@
-#board {
-  margin-top: 10px;
+body {
+	background-color: black;
+
+}
+h1 {
+	font-size: 100px;
+	color: #B6C9ED;
+	font-family: 'Merienda One', cursive;
 }
 
+#board {
+  margin-top: 10px;
+  border: 11px solid black;
+  
+}
 .box {
-  border: 1px solid black;
-  height: 150px;
+	color: #B6C9ED;
+	background-color: #2F4F4F;
+	font-size: 120px;
+	font-family: 'Merienda One', cursive;
+	text-align: center;
+	border: 6px solid black;
+  	height: 150px;
+	
+}
+
+#reset {
+	text-align: center;
+	margin-top: 40px;
 }
