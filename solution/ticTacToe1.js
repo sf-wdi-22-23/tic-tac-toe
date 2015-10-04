@@ -5,9 +5,8 @@ $(document).ready(function(){
 
   // select all the necessary elements
   // we speed up the site a little by using the $() selector once 
-  // and saving variables instead of selecting over and over
-  var $board = $('#board'),
-      $boxes = $('.box'),
+  // and saving variables instead of selecting over and over (especially for boxes)
+  var $boxes = $('.box'),
       $reset = $('#reset');
   
   // player "X" always goes first, and player "O" always goes second
