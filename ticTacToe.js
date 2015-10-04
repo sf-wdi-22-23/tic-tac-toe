@@ -658,6 +658,6 @@ function checkWinner() {
 
 
 
-  //when square is clicked, append with x or o
+
 
 
