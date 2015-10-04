@@ -1,14 +1,12 @@
 // wait for the DOM to finish loading
-$(document).ready(function(){
+$(document).ready(function() {
   // all code to manipulate the DOM
   // goes inside this function
 
-  // select all the necessary elements
+  // select all the boxes
   // we speed up the site a little by using the $() selector once 
-  // and saving variables instead of selecting over and over
-  var $board = $('#board'),
-      $boxes = $('.box'),
-      $reset = $('#reset');
+  // and saving the result in a variable instead of selecting over and over
+  var $boxes = $('.box');
   
   // player "X" always goes first, and player "O" always goes second
   var turn = "X";
@@ -16,7 +14,19 @@ $(document).ready(function(){
   // count how many moves have happened since reset
   // a full game is 9 moves
   var moves = 0;
-  
+
+  // helper function to reset the game
+  var resetGame = function() {
+    // reset the board itself
+    $boxes.text("");
+    $boxes.removeClass("X");
+    $boxes.removeClass("O");
+
+    // reset the variables that track game progress
+    turn = "X";   
+    moves = 0;
+  };
+
   // helper function to change turn to the next player
   var changeTurn = function() {
     if (turn === "X") {
@@ -26,74 +36,82 @@ $(document).ready(function(){
     }
   };
 
-  // helper function to reset board
-  var resetGame = function() {
-    // reset the board itself
-    $boxes.text("");
-    $boxes.removeClass("X")
-    $boxes.removeClass("O");
+  /**** HELPER FUNCTIONS TO CHECK FOR WINNER ****/
 
-    // reset the variables that track game progress
-
-    // player X always goes first
-    turn = "X";
-    
-    // reset moves count
-    moves = 0;
-  };
-
-  // helper function to check for wins
-  // returns true if the player passed into the function ("X" or "O")
-  var allThree = function(player, box1, box2, box3) {
+  // returns "X" if player X owns all three boxes passed in, 
+  //   "O" if player O owns all three boxes passed in, or 
+  //   null otherwise
+  var allThree = function(firstBox, secondBox, thirdBox) {
     // note that $boxes.get(i), like $boxes[i], returns a plain DOM element
     // so all of these boxes are passed in as non-jQuery DOM elements
     // we convert them to jQuery using $()
-    return ($(box1).text() === player) && ($(box2).text() === player) && ($(box3).text() === player);
+    var firstBoxOwner = $(firstBox).text(),
+        secondBoxOwner = $(secondBox).text(),
+        thirdBoxOwner = $(thirdBox).text();
+
+    if ((firstBoxOwner === secondBoxOwner) && (secondBoxOwner === thirdBoxOwner)){
+      if (firstBoxOwner === "X"){
+        return "X";
+      } else if (firstBoxOwner === "O"){
+        return "O";
+      }
+    }
+    // we will only get to this point if we haven't returned
+    // a player mark yet
+    return null;
   };
 
   // check for wins across both diagonals
-  // returns true if player owns all three boxes in one of the diagonals
-  var winsDiagonal = function(player) {
-    return allThree(player, $boxes.get(0), $boxes.get(4), $boxes.get(8)) ||
-           allThree(player, $boxes.get(2), $boxes.get(4), $boxes.get(6));
+  // returns a player mark if one player owns all three boxes in one of the diagonals
+  // returns null otherwise
+  var diagonalWinner = function() {
+    var leftDownDiag = allThree($boxes.get(0), $boxes.get(4), $boxes.get(8));
+    var rightUpDiag = allThree($boxes.get(2), $boxes.get(4), $boxes.get(6));
+
+    // Using a special property of JS's OR (||) to return the winning mark
+    // remember, as soon as JS finds a truthy side of an OR, 
+    // it returns the *value* of that side.  So null || "O" will give us "O".
+    return leftDownDiag || rightUpDiag;
   };
 
   // check for wins on columns
-  // returns true if player owns all three boxes in one of the columns
-  var winsColumn = function(player) {
-    return allThree(player, $boxes.get(0), $boxes.get(3), $boxes.get(6)) ||
-           allThree(player, $boxes.get(1), $boxes.get(4), $boxes.get(7)) ||
-           allThree(player, $boxes.get(2), $boxes.get(5), $boxes.get(8));
+  // returns a player mark if one player owns all three boxes in one of the columns
+  // returns null otherwise
+  var columnWinner = function() {
+    var leftCol = allThree($boxes.get(0), $boxes.get(3), $boxes.get(6));
+    var middleCol = allThree($boxes.get(1), $boxes.get(4), $boxes.get(7));
+    var rightCol = allThree($boxes.get(2), $boxes.get(5), $boxes.get(8));
+
+    // using the || trick again
+    return leftCol || (middleCol || rightCol);
   };
 
-  // check for wins on columns
-  // returns true if player owns all three boxes in one of the rows
-  var winsRow = function(player) {
-    return allThree(player, $boxes.get(0), $boxes.get(1), $boxes.get(2)) ||
-           allThree(player, $boxes.get(3), $boxes.get(4), $boxes.get(5)) ||
-           allThree(player, $boxes.get(6), $boxes.get(7), $boxes.get(8));
-  };
+  // check for wins on rows
+  // returns a player mark if one player owns all three boxes in one of the row
+  // returns null otherwise
+  var rowWinner = function() {
+    var topRow = allThree($boxes.get(0), $boxes.get(1), $boxes.get(2));
+    var middleRow = allThree($boxes.get(3), $boxes.get(4), $boxes.get(5));
+    var bottomRow = allThree($boxes.get(6), $boxes.get(7), $boxes.get(8));
 
-  // checks for wins on full board
-  // returns true if player is winner of a row, column, or diagonal
-  var winnerIs = function(player) {
-    return winsRow(player) || winsColumn(player) || winsDiagonal(player);
+    return topRow || (middleRow || bottomRow);
   };
 
   // helper function to check for winner
   var getWinner = function() {
-    if (winnerIs("X")) {
-      return "X";
-    }
-    else if (winnerIs("O")) {
-      return "O";
-    }
-    else {
-      return null;
-    }
+    return diagonalWinner() || (rowWinner() || columnWinner());
   };
 
-  // listen for clicks on each box
+
+
+  /**** EVENT LISTENERS ****/
+
+  // listen for clicks on reset button to reset the game
+  $('#reset').on('click', function() {
+    resetGame();
+  });
+
+  // listen for clicks on each box to play the game
   // ('event delegation' is a more efficient way to do this part, 
   // but we'll keep it simple for now)
   $boxes.on('click', function() {
@@ -122,15 +140,11 @@ $(document).ready(function(){
       } else {
         // there is no winner, and there are no empty spaces
         // alert the result and reset the game
-        alert("Neither player wins!");
+        alert("Neither player won!");
         resetGame();
       }
     }
   });
 
-  // listen for clicks on `reset` button to reset the board
-  $reset.on('click', function () {
-    resetGame();
-  });
 
 });
