@@ -1,8 +1,27 @@
+tictactoe.js
 #board {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .box {
   border: 1px solid black;
+  cursor: pointer;
+  font-size: 60px;
   height: 150px;
+  padding: 40px 0;
+  background-color: purple;
+}
+.X {
+  color: black;
+}
+
+
+.O {
+ color: grey;	
+}
+
+.btn-danger {
+	background-color: purple;
+	border-color: black;
 }
