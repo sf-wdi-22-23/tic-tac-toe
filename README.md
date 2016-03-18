@@ -72,6 +72,7 @@ Remind yourself how tic-tac-toe works by playing a few games with a classmate.
    var firstParagraph = paragraphs.eq(0); // returns a jQuery element (so jQuery functions work on it)
    var vanillaVersion = paragraphs[0]; // returns the JavaScript version of the element (most jQuery functions won't work on it)
    ```
+ * The jQuery version of `.forEach` is [`.each`](http://api.jquery.com/jquery.each/).
 
 
 <details><summary>Track Turns</summary><p>You need to keep track of whose turn it is. This will be important when deciding whether to draw an `X` or an `O`. Try storing the turn as a variable.</p></details>
