@@ -16,7 +16,7 @@ $(document).ready(function() {
   var moves = 0;
 
   // helper function to reset the game
-  var resetGame = function() {
+  function resetGame() {
     // reset the board itself
     $boxes.text("");
     $boxes.removeClass("X");
@@ -28,7 +28,7 @@ $(document).ready(function() {
   };
 
   // helper function to change turn to the next player
-  var changeTurn = function() {
+  function changeTurn() {
     if (turn === "X") {
       turn = "O";
     } else {
@@ -41,7 +41,7 @@ $(document).ready(function() {
   // returns "X" if player X owns all three boxes passed in, 
   //   "O" if player O owns all three boxes passed in, or 
   //   null otherwise
-  var allThree = function($firstBox, $secondBox, $thirdBox) {
+  function allThree($firstBox, $secondBox, $thirdBox) {
    var firstBoxOwner = $firstBox.text(),
         secondBoxOwner = $secondBox.text(),
         thirdBoxOwner = $thirdBox.text();
@@ -61,7 +61,7 @@ $(document).ready(function() {
   // check for wins across both diagonals
   // returns a player mark if one player owns all three boxes in one of the diagonals
   // returns null otherwise
-  var diagonalWinner = function() {
+  function diagonalWinner() {
     // the eq method is how we "index into" a jQuery collection!
     var leftDownDiag = allThree($boxes.eq(0), $boxes.eq(4), $boxes.eq(8));
     var rightUpDiag = allThree($boxes.eq(2), $boxes.eq(4), $boxes.eq(6));
@@ -75,7 +75,7 @@ $(document).ready(function() {
   // check for wins on columns
   // returns a player mark if one player owns all three boxes in one of the columns
   // returns null otherwise
-  var columnWinner = function() {
+  function columnWinner() {
     var leftCol = allThree($boxes.eq(0), $boxes.eq(3), $boxes.eq(6));
     var middleCol = allThree($boxes.eq(1), $boxes.eq(4), $boxes.eq(7));
     var rightCol = allThree($boxes.eq(2), $boxes.eq(5), $boxes.eq(8));
@@ -87,7 +87,7 @@ $(document).ready(function() {
   // check for wins on rows
   // returns a player mark if one player owns all three boxes in one of the row
   // returns null otherwise
-  var rowWinner = function() {
+  function rowWinner() {
     var topRow = allThree($boxes.eq(0), $boxes.eq(1), $boxes.eq(2));
     var middleRow = allThree($boxes.eq(3), $boxes.eq(4), $boxes.eq(5));
     var bottomRow = allThree($boxes.eq(6), $boxes.eq(7), $boxes.eq(8));
@@ -96,7 +96,7 @@ $(document).ready(function() {
   };
 
   // helper function to check for winner
-  var getWinner = function() {
+  function getWinner() {
     return diagonalWinner() || (rowWinner() || columnWinner());
   };
 
