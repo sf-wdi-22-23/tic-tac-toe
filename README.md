@@ -76,7 +76,7 @@ Remind yourself how tic-tac-toe works by playing a few games with a classmate.
 
 <details><summary>Track Turns</summary><p>You need to keep track of whose turn it is. This will be important when deciding whether to draw an `X` or an `O`. Try storing the turn as a variable.</p></details>
 
-<details><summary>Claiming a Box</summary><p>You'll need a way for your code to check whether a box is empty. When a box is claimed, use jQuery to change the box's DOM element somehow. Then you can check that feature of the box later! Test your ideas in the console.</p></details>
+<details><summary>Claim a Box</summary><p>You'll need a way for your code to check whether a box is empty. When a box is claimed, use jQuery to change the box's DOM element somehow. Then you can check that feature of the box later! Test your ideas in the console.</p></details>
 
 <details><summary>Reset Everything</summary><p>Your reset button should change the board back to its initial configuration. Make sure you empty all the boxes and reset all other variables to their starting values. Don't forget the starting turn variable!</p></details>
 
