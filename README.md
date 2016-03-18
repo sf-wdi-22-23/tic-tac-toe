@@ -99,3 +99,4 @@ Remind yourself how tic-tac-toe works by playing a few games with a classmate.
 
 * As you make code changes, frequently commit and push to GitHub.
 * Once you've finished the assignment and pushed your work to GitHub, make a pull request from your fork to the original repo.
+* When we come back, you'll show off your tic-tac-toe game in a "science fair" style open presentation!
