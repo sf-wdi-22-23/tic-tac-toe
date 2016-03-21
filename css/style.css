@@ -4,7 +4,7 @@
 }
 
 .box {
-  border: 15px solid black;
+  border: 5px solid black;
   cursor: pointer;
   font-size: 40px;
   height: 150px;
@@ -28,3 +28,9 @@
   background-color: #CD4E4E;
   border-color: #040404;
 }
+body {
+   background-color: grey;
+   text-transform: uppercase;
+   font-family: 'Lora', serif;
+  color: black;
+ }
