@@ -1,14 +1,14 @@
 #board {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .box {
-  border: 10px solid blue;
+  border: 15px solid black;
   cursor: pointer;
-  font-size: 70px;
-  height: 100px;
-  padding: 50px 0;
+  font-size: 40px;
+  height: 150px;
+  padding: 30px 5px;
 }
 
 .X {
@@ -20,11 +20,11 @@
 }
 
 .btn-danger {
-  background-color: #18F2AB;
+  background-color: #8D18F2;
   border-color: #f2183d;
 }
 
 .btn-danger:hover {
-  background-color: #4ecdc4;
-  border-color: #4ecdc4;
+  background-color: #CD4E4E;
+  border-color: #040404;
 }
