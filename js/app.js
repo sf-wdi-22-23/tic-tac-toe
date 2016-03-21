@@ -19,7 +19,6 @@ $(document).ready(function() {
     }
   }
 
-
   function allThree($firstBox, $secondBox, $thirdBox) {
    var firstBoxOwner = $firstBox.text(),
         secondBoxOwner = $secondBox.text(),
@@ -36,12 +35,10 @@ $(document).ready(function() {
   }
 
   function diagonalWinner() {
-
     var leftDownDiag = allThree($boxes.eq(0), $boxes.eq(4), $boxes.eq(8));
     var rightUpDiag = allThree($boxes.eq(2), $boxes.eq(4), $boxes.eq(6));
     return leftDownDiag || rightUpDiag;
   }
-
 
   function columnWinner() {
     var leftCol = allThree($boxes.eq(0), $boxes.eq(3), $boxes.eq(6));
@@ -94,6 +91,4 @@ $(document).ready(function() {
       }
     }
   });
-
-
 });
