@@ -1,0 +1,36 @@
+#board {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.box {
+  border: 5px solid black;
+  cursor: pointer;
+  font-size: 40px;
+  height: 150px;
+  padding: 30px 5px;
+}
+
+.X {
+  color: #F2400D;
+}
+
+.O {
+  color: #0D3FF2;
+}
+
+.btn-danger {
+  background-color: #8D18F2;
+  border-color: #f2183d;
+}
+
+.btn-danger:hover {
+  background-color: #CD4E4E;
+  border-color: #040404;
+}
+body {
+   background-color: grey;
+   text-transform: uppercase;
+   font-family: 'Lora', serif;
+  color: black;
+ }
